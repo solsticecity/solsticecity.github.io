@@ -1,0 +1,23 @@
+<center>
+  <br>
+  <h1>Welcome to SCSRI Management Website</h1><br>
+  <p>Enter staff passcode to continue</p>
+  <input id="password" type="password">
+  <button id="submit" type="button">→</button>
+</center>
+
+<script>
+  var password = "agldba";
+
+  var submitButton = document.getElementById("submit"); 
+  var passwordField = document.getElementById("password"); 
+
+  submitButton.addEventListener("click", function() {
+    var enteredPassword = passwordField.value;
+    if (enteredPassword === password) {
+      window.location.assign("/scsri/timmy/42/access/staff1")
+    } else {
+      alert("Incorrect Password.<br>Warning: The password is in all lowercase.")
+    }
+  });
+</script>
